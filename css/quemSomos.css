@@ -1,0 +1,95 @@
+:root{
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    --main: #7DA0CA;
+    --azul-escuro: #052659;
+}
+main {
+    margin-top: 160px;
+    padding: 2rem 0;
+    background: #fff;
+    min-height: 100vh;
+    background-image: url('../imagens/fundo.jpg');
+    background-size: cover;
+}
+.container-kanye{ 
+    padding: 3rem;
+    display: flex;
+}
+.container-icone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    text-transform: none;
+}
+main h1{
+    margin-top: -58px;
+    background: #39648F;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+.container-kanye .box-icone {
+    width: 246px;
+    height: 9vw;
+    gap: 5px;
+    margin-top: 14px;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    font-size: 18px;
+    border-width: 3px;
+    background: #39648f8f;
+    color: #fff;
+    
+}
+
+.container-kanye .box-icone img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+h4 {
+    font-weight: bolder;
+}
+
+.container-kanye .box-icone {
+    display: flex;
+    padding: 8px;
+}
+
+main .texto p {
+    color: #ffff;
+    background: #1f64a98f;
+    padding: 10px;
+    border-width: 3px;
+    border-radius: 10px;
+    font-size: 27px;
+    font-family: 'Century Gothic', sans-serif;
+    text-align: justify;
+    font-weight: normal;
+}
+
+main .texto {
+    padding: 7px;
+    text-transform: none;
+    margin-left: 5%;
+    max-width: 30vw;
+}
+
+@media(max-width: 768px){
+   main.texto p {
+    font-size: 18px;
+   }
+
+.main {
+    flex-direction: column;
+    min-height: 7vw;
+}
+
+}
+

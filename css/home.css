@@ -1,0 +1,581 @@
+:root{
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    --main: #7DA0CA;
+    --azul-escuro: #052659;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body{
+    text-transform: uppercase;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main);
+    border-radius: 5rem;
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--azul-escuro);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    padding: 1.2rem 0;
+}
+
+
+.btn {
+    position: relative;
+    font-size: 1.3rem;
+    background: var(--azul-escuro);
+    color: #DFDFDF;
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    padding: 0.8rem 3rem;
+    margin-top: 1.1rem;
+    overflow: hidden; /* Adiciona overflow hidden para ocultar o conteúdo do pseudo-elemento que estenderá além do botão */
+    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+.btn span{
+    position: relative;
+    z-index: 2;
+}
+
+#btn-cadastro{
+    font-size: large;
+}
+
+.btn::before {
+    content: '';
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Inicia o pseudo-elemento fora do botão */
+    width: 100%;
+    height: 100%;
+    background: #2154a0; /* Cor de preenchimento */
+    transition: left 0.3s ease; /* Adiciona uma transição suave para o movimento */
+    z-index: 1; /* Define a ordem de empilhamento */
+}
+
+.btn:hover::before {
+    left: 0; /* Move o pseudo-elemento para a direita */
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #DFDFDF; /* Altera a cor do texto ao passar o mouse sobre o botão */
+}
+
+
+
+/*cadastro form*/
+
+
+
+.popup{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 500px;
+    padding: 20px;
+    background: #DFDFDF;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    z-index: 1001;
+    
+    transition: top 0ms ease-in-out 200ms,
+    opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+}
+
+.popup.active{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    top: 50%;
+    transition: top 0ms ease-in-out 0ms,
+    opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+}
+
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup .form h3{
+    text-align: center;
+    color: var(--azul-escuro);
+    margin: 0px 0px 2px;
+}
+
+.popup .form .form-element{
+    margin: 5px 0px;
+}
+
+.popup .form .form-element label{
+    font-size: 13px;
+    color: #222;
+}
+
+.popup .form .form-element input[type=text],
+.popup .form .form-element input[type=email],
+.popup .form .form-element input[type=password],
+.popup .form .form-element input[type=number]{
+    margin-top: .1rem;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-transform: none;
+    font-size: 1.3rem;
+    margin: .4rem 0;
+    color: black;
+}
+
+.popup .form .form-element .btn{
+    left: 72%;
+    bottom: 5rem;
+    top: 0.1rem;
+}
+
+/*home*/
+
+.home{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 120px;
+    text-align: center;
+}
+
+#principal{
+    height: 70rem;
+    width: auto;
+}
+
+.home .content{
+    max-width: 40rem;
+}
+
+.home .content h3{
+    color: #052659;
+    font-size: 3.7rem;
+    line-height: 1.4;
+    font-weight: 400;
+    font-family: 'Century Gothic', sans-serif;
+    text-transform: none;
+}
+
+.wave{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: -20px;
+ 
+}
+
+/*galeria*/
+
+.gallery{
+    background: #DFDFDF;
+    padding: 3rem 0;
+}
+
+
+.wave-revert{
+    width: 100%;
+    transform: rotate(180deg);
+    margin-top: -5px;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin: -30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+/*aplicativo*/
+
+.aplicativo{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+.aplicativo img{
+    width: 55rem;
+}
+
+.aplicativo .content{
+    max-width: 40rem;
+}
+
+.aplicativo .content h3{
+    color: black;
+    font-size: 3.5rem;
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: center;
+}
+
+.aplicativo .content h3 b{
+    color: #43B7BF;
+}
+
+/* fale conoso */
+
+.fale-conosco{
+    font-size: 15px;
+    background-color: #DFDFDF;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem ;
+    color: #052659;
+}
+
+.fale-conosco .titulo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #2154a0;
+}
+
+.fale-conosco .titulo i{
+    font-size: 32px;
+}
+
+.fale-conosco .caixa-texto{
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.fale-conosco .caixa-texto .EmailMensagem{
+    margin-left: 15px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.fale-conosco .caixa-texto .mensagem{
+    width: 80%;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.fale-conosco .caixa-texto .box{
+    display: flex;
+    align-items: center;
+}
+.fale-conosco .caixa-texto .box .btnEmail{
+    margin-left: 8px;
+    font-size: 32px;
+}
+.fale-conosco .caixa-texto .box .btnEmail:hover{
+    cursor: pointer;
+    color: #07357a;
+    transform: scale(1.1); /* Ajuste o valor conforme necessário para a escala desejada */
+}
+
+@media only screen and (max-width: 1300px) {
+    .home img{
+        width: 300px;
+    }
+
+}
+
+@media(max-width: 920px) {
+   
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content a{
+        width: 154px;
+    }
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;right: 0;
+        background: #DFDFDF;
+        border-top: .2rem solid #b8b8b8;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+    .aplicativo{
+        margin-left: 0;
+    }
+    .aplicativo img{
+        width: 250px;
+    }
+
+    .aplicativo .content{
+       margin-left: 0; 
+    }
+
+    .aplicativo .content h3{
+        font-size: 20px;
+    }
+    .slider{
+        width: 500px;
+        right: 100;
+    }
+    .manual-navigation{
+        width: 500px;
+        margin: -130px auto;
+    }
+
+   .home img{
+    width: 250px;
+   }
+
+
+}
+
+
+@media(max-width: 768px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;right: 0;
+        background: #DFDFDF;
+        border-top: .2rem solid #b8b8b8;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        font-size: 1rem;
+    }
+    .home{
+        background-position: left;
+    }
+    .home img{
+        display:none
+    }
+
+    .home .content h3{
+        font-size: 2rem;
+    }
+    .aplicativo img{
+        width: 200px;
+    }
+}
+
+
+
+@media(max-width: 520px) {
+    .slider{
+        width: 400px;
+    }
+    .manual-navigation{
+        width: 400px;
+        margin: -180px auto;
+    }
+    .wave-revert {
+        margin-top: -20px;
+    }
+    .gallery{
+        padding: 0;
+    }
+    .home{
+        margin-top: 160px;
+    }  
+    .fale-conosco .caixa-texto .box button{
+        margin-left: 5px;
+    }
+
+    .aplicativo {
+        margin-left: 10px;
+    }
+    .popup.active{
+        transform: translate(-50%, -67%) scale(0.9);
+        width: 386px;
+    }
+
+}
+
+@media(max-width: 420px) {
+    html{
+        font-size: 50%;
+    }
+    .slider{
+        width: 317px;
+    }
+    .manual-navigation{
+        width: 320px;
+        margin: -228px auto;
+    }
+    .home .content h3{
+        color: black;
+        font-size: 2.5rem;  
+    }
+    .aplicativo img{
+        width: 140px;
+    }
+    .popup.active{
+        width: 315px;
+    }
+    .popup .form .form-element .btn{
+        left: 65%;;
+    }
+    .gallery{
+        height: 342px;
+    }
+}
+
+
+
+ 
+ 
+ 
+

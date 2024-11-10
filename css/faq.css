@@ -1,0 +1,80 @@
+:root{
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    --main: #7DA0CA;
+    --azul-escuro: #052659;
+}
+
+main {
+    margin-top: 160px;
+    padding: 2rem 0;
+    background: #fff;
+
+}
+main h1{
+    margin-top: -58px;
+    background: #39648F;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+}
+
+.container-faq {
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+.container-faq .container-pergunta h3{
+    align-items: center;
+    display: flex;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    border-width: 3px;
+    background: #39648F;
+    color: #fff;
+}
+
+.container-faq .container-pergunta p {
+    padding: 10px;
+    border: 1px solid #5483B3;
+    height: 250px;
+    border-radius: 10px;
+    font-size: 18px;
+    border-width: 3px;
+    text-transform: none;
+}
+
+.container-faq .container-pergunta {
+    width: 700px;
+   padding: 8px;
+}
+
+.caixa{
+    gap: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    position: relative;
+    font-size: 1.3rem;
+    background: var(--azul-escuro);
+    color: #DFDFDF;
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    padding: 0.8rem 3rem;
+    margin-top: 1.1rem;
+    overflow: hidden; /* Adiciona overflow hidden para ocultar o conteúdo do pseudo-elemento que estenderá além do botão */
+    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+
+.btn:hover {
+    cursor: pointer;
+}
