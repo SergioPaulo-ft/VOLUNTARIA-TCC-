@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="276dp"
+        android:text="2) O APP É CONFIÁVEL?"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="412dp"
+        android:text="3)COMO FAÇO PARA ME CADASTRAR? "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="540dp"
+        android:text="4) POSSO LOGAR COM A MINHA CONTA ONG? "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="69dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="AJUDA"
+        android:textColor="#0097B2"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="164dp"
+        android:text="1) QUAL A FUNÇÃO DO SITE?"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="204dp"
+        android:text="Desenvolvemos pensando em praticidade para os usuarios acessarem informaçoes iimportes sem precisar usar o computador."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="392dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="324dp"
+        android:text="Sim, assim como nossos administradores do site, trabalhamos com uma equipe especializada em proteger dados pessoais dos nosso usuarios."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="392dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="456dp"
+        android:text="O botao para cadastro aparecera na home do nosso aplicativo, assim que clicar você  sera levado para nossa pagina web para efetuar seu cadastro."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="392dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="616dp"
+        android:text="O aplicativo é exclusivo para usuario voluntario, as ONGs so poderam acessar informaçoes pelo nosso site web."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

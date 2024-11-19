@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity5">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:text="NOSSO TIME "
+        android:textColor="#0097B2"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="92dp"
+        android:text="Giulia Marques 18 anos Banco de Dados."
+        app:layout_constraintStart_toEndOf="@+id/giulia"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Guilherme Elias 19 anos Designer."
+        app:layout_constraintStart_toEndOf="@+id/gui"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Julia Veroneze 18 anos Back-end."
+        app:layout_constraintStart_toEndOf="@+id/julia"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Leticia Pereira 17 anos Documentaçao."
+        app:layout_constraintStart_toEndOf="@+id/lekibe"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Maria Luiza 18 anos Documentaçao."
+        app:layout_constraintStart_toEndOf="@+id/maluzinha"
+        app:layout_constraintTop_toBottomOf="@+id/textView21"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Samira Campos 17 anos Designer."
+        app:layout_constraintStart_toEndOf="@+id/sami"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Sergio Paulo 23 anos Back-end."
+        app:layout_constraintStart_toEndOf="@+id/serjo"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Victoria Gomes 20 anos  Web-Designer."
+        app:layout_constraintStart_toEndOf="@+id/vickTwice"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <ImageView
+        android:id="@+id/giulia"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/giulia" />
+
+    <ImageView
+        android:id="@+id/gui"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giulia"
+        app:srcCompat="@drawable/guilherme" />
+    <ImageView
+        android:id="@+id/julia"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gui"
+        app:srcCompat="@drawable/julia" />
+    <ImageView
+        android:id="@+id/lekibe"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/julia"
+        app:srcCompat="@drawable/leticia" />
+    <ImageView
+        android:id="@+id/maluzinha"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lekibe"
+        app:srcCompat="@drawable/malu" />
+    <ImageView
+        android:id="@+id/sami"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maluzinha"
+        app:srcCompat="@drawable/samira" />
+    <ImageView
+        android:id="@+id/serjo"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sami"
+        app:srcCompat="@drawable/sergio" />
+    <ImageView
+        android:id="@+id/vickTwice"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serjo"
+        app:srcCompat="@drawable/victoria" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
