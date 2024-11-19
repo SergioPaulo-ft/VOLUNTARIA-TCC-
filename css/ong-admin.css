@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --clr-primary: #052659;
+    --clr-light: rgba(132, 139, 200, 0.18);
+
+    --clr-white: #fff;
+    --clr-dark: rgb(56, 56, 56);
+    --clr-dark-variant: #677483;
+    --clr-color-background: #DFDFDF;
+    --card-border-radius:2rem;
+    --border-radius-1:0.4rem;
+    --border-radius-2:0.8rem;
+    --border-radius-3:1.2rem;
+    --clr-verde-agua:#43B7BF;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+
+.dark-theme-variables{
+    --clr-color-background: #181a1e;
+    --clr-white: #202528;
+    --clr-light: rgba(0,0,0,0.4);
+    --clr-dark: #edeffd;
+    --clr-dark-variant: #677483;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background: var(--clr-color-background);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 14rem auto 14rem;
+    width: 96%;
+    gap:1.8rem;
+    margin: 0 auto;
+}
+
+a{
+    color: black;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: black;
+}
+
+p{
+    color: gray;
+}
+
+b{
+    color: black;
+}
+
+.primary{
+    color: #7380ec;
+}
+
+.sucess{
+    color: green;
+}
+
+.danger{
+    color: red;
+}
+
+.warning{
+    color: pink;
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    background-color: var(--clr-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+
+aside .logo{
+    display: flex;
+    gap: 1rem;
+}
+
+aside .top .close{
+    cursor: pointer;
+    display: none;
+    color: var(--clr-dark);
+}
+
+
+/*sidebar*/
+
+aside .sidebar{
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+    top: 1rem;
+}
+
+aside .sidebar h3{
+    font-weight: 400;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--clr-dark);
+    margin-left: 1rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1s ease-in;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all .1s ease-in;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+   
+}
+
+aside .sidebar a.active{
+    background: #b9ecf0;
+    color: rgb(56, 56, 56);
+    margin-left: 0;
+    border-left: 5px solid var(--clr-verde-agua);
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--clr-verde-agua);
+}
+
+aside .sidebar a:hover{
+    color: var(--clr-verde-agua);
+}
+
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+    transition: .4s ease;
+}
+
+/*main*/
+
+main{
+    margin-bottom: 200px;
+    width: auto;
+}
+
+main .addVaga{
+    width: 100%;
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .addVaga label{
+    color: var(--clr-dark);
+}
+
+main .addVaga input{
+    font-size: 1rem;
+    padding: 8px 0.2rem;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    margin: .2rem 0;
+    color: black;
+    width: 50%;
+    text-transform: none;
+    border-radius: 5px;
+    background-color: var(--clr-white);
+    color: var(--clr-dark);
+}
+
+main .addVaga .btn{
+    font-size: 1rem;
+    background:var(--clr-verde-agua);
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+main .addVaga .btn:hover{
+    background: #44c6cf;
+    box-shadow: var(--box-shadow);
+}
+
+
+main .box-search{
+    display:flex;
+    justify-content: center;
+    gap: .1%;
+    margin-top: 10px;
+}
+.box-search input{
+    border-radius: 7px;
+    width:45%;
+    padding: 5px 5px;
+    background: var(--clr-white);
+    color: var(--clr-dark);
+}
+.box-search button{
+    padding: 2px 6px;
+    background: #43B7BF;
+    border-radius: 20%;
+    cursor: pointer;
+    color:var(--clr-dark);
+}
+.box-search button:hover{
+    background-color:#40b1b9;
+    color: var(--clr-white);
+}
+
+
+
+main .recent_order{
+    margin-top: 5rem;
+}
+
+main .recent_order h1{
+    text-align: center;
+    color: var(--clr-dark);
+}
+
+main .recent_order h2{
+    color: var(--clr-dark);
+}
+
+main .recent_order table{
+    margin-top: 1rem;
+    background-color: var(--clr-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+    color: var(--clr-dark);
+}
+
+
+
+main .recent_order table:hover{
+    box-shadow: none;
+}
+
+main table tbody tr{
+    height: 3.8rem;
+    border-bottom: 1px solid var(--clr-white);
+    color: var(--clr-dark);
+}
+
+main table tbody button{
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--clr-verde-agua);
+}
+
+main table tbody td{
+    height: 3.8rem;
+    border-bottom: 1px solid var(--clr-dark);
+}
+
+main table tbody td a{
+    color: var(--clr-verde-agua);
+}
+
+main table tbody td a:hover{
+    color: var(--clr-dark);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent_order a{
+    text-align: center;
+    display: block;
+    margin: 1rem;
+}
+
+
+/*right*/
+
+.right{
+    margin-top: 1.4rem;
+}
+
+.right h2{
+    color: black;
+}
+
+.right .top{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.right .top button{
+    display: none;
+    
+}
+
+.right .theme-toggler{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-toggler span.active{
+    background-color: var(--clr-verde-agua);
+    color: var(--clr-color-background);
+}
+
+.right .top .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+}
+
+
+.right .info .profile-photo img a{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+   
+}
+
+.right .info p b{
+    color: var(--clr-dark);
+}
+
+
+.right .item p{
+    color: var(--clr-dark-variant);
+}
+
+/*media query*/
+
+@media screen and (max-width:1200px) {
+    .container{
+        width: 94%;
+        grid-template-columns: 7rem auto 14rem;
+    }
+    aside .sidebar h3{
+        display: none;
+    }
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    main{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/*media query p cell*/
+
+@media screen and (max-width:768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+    }    
+    aside{
+        position: fixed;
+        width: 18rem;
+        z-index: 3;
+        background-color: var(--clr-white);
+        display: none;
+        left: -100px;
+        animation: menuAni 1s forwards;
+    }
+
+    aside .top .close{
+        display: block;
+    }
+
+    @keyframes menuAni {
+        to{
+            left: 0;
+        }
+        
+    }
+
+    aside .logo{
+        display: inline;
+    }
+    aside .sidebar h3{
+        display: inline;
+    }
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+    
+    aside .top div.close span{
+        display: inline;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+        font-size: 35px;
+        
+    }
+
+    .right .top{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.8rem;
+        background-color: var(--clr-white);
+        width: 100%;
+        height: 4.6rem;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--box-shadow);
+        margin: 0;
+    }
+
+    .main .recent_order{
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    .right .profile{
+        position: absolute;
+        left: 70%;
+    }
+
+    .right .top button{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: black;
+        position: absolute;
+        left: 1rem;
+    }
+    
+}
+

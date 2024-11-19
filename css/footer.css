@@ -1,0 +1,161 @@
+
+
+/*contato*/
+.contact{
+    background: #DFDFDF;
+}
+
+.heading{
+   padding-top: 2rem;
+}
+
+.contact form{
+    padding: 2rem 25%;
+    text-align: center;
+}
+
+.contact form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact form .inputBox input,
+.contact form .inputBox textarea{
+    font-size: 1.2rem;
+    width: 49%;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    text-transform: none;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form  textarea::placeholder{
+    text-transform: capitalize;
+}
+
+.contact form textarea{
+    height: 15rem;
+    width: 100%;
+    resize: none;
+    padding: 1rem 1rem;
+}
+
+/*footer*/
+
+.footer{
+    background: #202528;
+    background-size: cover;
+    padding: 3rem 7%;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.footer .box-container .box h3{
+    font-size: 1.6rem;
+    color: #DFDFDF;
+    padding: 1rem 0;
+}
+
+
+.footer .box-container .box .links{
+    display: block;
+    font-size: 1.5rem;
+    color: #DFDFDF;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links i{
+    color: #43B7BF;
+    padding-right: .5rem;
+}
+
+.footer .box-container .box .links:hover i{
+    padding-right: 1rem;
+}
+
+.footer .box-container .box .share a{
+    height: 5rem;
+    width: 100px;
+    padding: 1rem 1.6rem;
+    line-height: 8rem;
+    color: #DFDFDF;
+    background: #43B7BF;
+    font-size: 2.5rem;
+    border-radius: 10rem;
+    margin-right: .8rem;
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.footer .box-container .box .share a:hover{
+    background: #DFDFDF;
+    color: #43B7BF;
+}
+
+.footer .credit{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2.5rem;
+    color: #DFDFDF;
+    border-top: .1rem solid #DFDFDF;
+}
+
+/*media - query*/
+
+@media only screen and (max-width: 760px) {
+    .box-social{
+        display: block;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+    }
+    .social-links{
+        padding: 2rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .info-links{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .contato{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    @media(max-width: 991px) {
+        html{
+            font-size: 55%;
+        }
+        .header{
+            padding: 2rem;
+        }
+        section{
+            padding: 8rem 2rem;
+        }
+    
+    }
+    
+    @media(max-width: 768px){
+        #menu-btn{
+            display: inline-block;
+        }
+}
+}
+@media only screen and (max-width:420px){
+    .footer .box-container{
+        flex-direction: column;
+        margin-left: 15%;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --clr-primary: #052659;
+    --clr-light: rgba(132, 139, 200, 0.18);
+
+    --clr-white: #fff;
+    --clr-dark: rgb(56, 56, 56);
+    --clr-dark-variant: #677483;
+    --clr-color-background: #DFDFDF;
+    --card-border-radius:2rem;
+    --border-radius-1:0.4rem;
+    --border-radius-2:0.8rem;
+    --border-radius-3:1.2rem;
+    --clr-verde-agua:#43B7BF;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+
+.dark-theme-variables{
+    --clr-color-background: #181a1e;
+    --clr-white: #202528;
+    --clr-light: rgba(0,0,0,0.4);
+    --clr-dark: #edeffd;
+    --clr-dark-variant: #677483;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+body {
+    max-width: 100%;
+}
+
+main .recent_order .row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens vão para a próxima linha */
+    gap: 16px; /* Espaço entre os itens */
+    justify-content: space-between; /* Espaço entre os itens */
+}
+
+main .recent_order .row .card {
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--clr-white);
+    padding: 20px;
+    margin: 10px 0; /* Reduz a margem vertical */
+    width: calc(50% - 16px); /* Cada card ocupa 50% menos o gap */
+    transition: all 0.3s ease-out;
+    border-left: 3px solid var(--clr-verde-agua);
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+main .recent_order .row .card:hover {
+    transform: rotateY(-5px);
+}
+
+main .recent_order .row .card .btn-insc {
+    padding: 7px;
+    cursor: pointer;
+    background-color: var(--clr-verde-agua);
+    color: var(--clr-dark);
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: var(--box-shadow);
+    float: right;
+}
+
+main .recent_order .row .card h2,
+main .recent_order .row .card h4,
+main .recent_order .row .card h5 {
+    color: var(--clr-dark);
+}
+
+main .recent_order .card form {
+    display: flex;
+    flex-direction: column;
+}
+

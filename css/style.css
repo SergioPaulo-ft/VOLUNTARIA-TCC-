@@ -1,0 +1,336 @@
+:root{
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    --main: #7DA0CA;
+    --azul-escuro: #052659;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 8rem 20%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--azul-escuro);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    padding: 1.2rem 0;
+}
+
+
+
+
+.btn{
+    font-size: 1.3rem;
+    display: inline-block;
+    background: var(--azul-escuro);
+    color: #DFDFDF;
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    padding: 0.8rem 3rem;
+    margin-top: 1.1rem;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #2154a0;
+    z-index: -1;
+    transition: .2s linear;
+    left: 0;
+}
+
+.btn:hover::before{
+    width: 100%;
+}
+
+/*header*/
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #DFDFDF;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.header .navbar a{
+    font-size: 1.3rem;
+    color: var(--azul-escuro);
+    margin: 0 1rem;;
+}
+
+.header .logo{
+    width: 80px;
+}
+
+.header .navbar a:hover{
+    color: var(--main);
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: #052659;
+}
+
+.header .icons div:hover{
+    color: var(--main);
+}
+
+#menu-btn{
+    display: none;
+}
+
+/*login-form*/
+
+.header .login-form{
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    background: #DFDFDF;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    padding: 2rem;
+}
+
+.header .login-form.active{
+    right: 2rem;
+    transition: .6s linear;
+}
+
+.header .login-form h3{
+    font-size: 2rem;
+    color: var(--azul-escuro);
+    text-transform: uppercase;
+    margin-bottom: .7rem;
+    text-align: center;
+}
+
+.header .login-form .box{
+    font-size: 1.3rem;
+    padding: 1rem 1.2rem;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    margin: .7rem 0;
+    color: black;
+    width: 100%;
+    text-transform: none;
+}
+
+.header .login-form .remember{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .7rem 0;
+}
+
+.header .login-form .remember label{
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+}
+
+.header .login-form .btn{
+    width: 100%;
+    text-align: center;
+}
+
+/*fim login-form*/
+
+
+
+/*home*/
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../imagens/porta.png) no-repeat;
+    background-size: 900px;
+    background-position: 50rem 10rem;
+}
+
+.home .content{
+    max-width: 40rem;
+}
+
+.home .content h3{
+    color: black;
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.home .wave{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 22rem;
+ 
+}
+
+/*galeria*/
+
+.gallery{
+    background: #DFDFDF;
+}
+
+
+.gallery .wave2{
+    position: absolute;
+    bottom: 1; left: 0;
+    width: 100%;
+    height: 10rem;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 800px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+/*aplicativo*/
+
+.aplicativo{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../imagens/app.png) no-repeat #F8F8F8;
+    background-size: 850px;
+    background-position: 50rem 5rem;
+}
+
+.aplicativo .content{
+    max-width: 30rem;
+}
+
+.aplicativo .content h3{
+    color: black;
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.aplicativo .content h3 b{
+    color: #43B7BF;
+}
